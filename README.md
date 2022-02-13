@@ -7,4 +7,6 @@
 - [build-tools](./build-tools.md) 
 - dstools-deployment 
 
+## MISC 
 
+[matplotlib 한글 폰트 ](https://github.com/anarinsk/til/blob/master/python/check-matplotlb-korfont.md)
