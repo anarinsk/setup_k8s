@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: dstools
   labels:
-    app: rstudio
+    app: jupyter_rstudio
 spec:
   containers:
     - name: rstudio
