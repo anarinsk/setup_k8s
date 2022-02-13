@@ -11,4 +11,4 @@ spec:
       nodePort: 30001
       name: rstudio-ide
   selector:
-    app: rstudio
+    app: jupyter-rstudio

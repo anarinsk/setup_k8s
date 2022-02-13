@@ -17,4 +17,4 @@ spec:
       nodePort: 31002
       name: streamlit2   
   selector:
-    app: jupyter
+    app: jupyter-rstudio
