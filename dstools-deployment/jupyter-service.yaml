@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: jupyter-service
+  labels:
+    app: jupyter
+spec:
+  type: NodePort
+  ports:
+    - port: 8888
+      nodePort: 30002
+      name: jupyter-ide
+    - port: 8501 
+      nodePort: 31001
+      name: streamlit1
+    - port: 8502 
+      nodePort: 31002
+      name: streamlit2   
+  selector:
+    app: rstudio

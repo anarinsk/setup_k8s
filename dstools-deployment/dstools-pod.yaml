@@ -1,0 +1,47 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dstools
+  labels:
+    app: rstudio
+spec:
+  containers:
+    - name: rstudio
+      image: anarinsk/rstudio-m1-korfont
+      env:
+        - name: PASSWORD
+          value: "1022"
+        - name: UMASK
+          value: "000"
+        - name: ROOT 
+          value: "true" 
+      ports:
+        - containerPort: 8787
+      volumeMounts:
+        - name: anari-github
+          mountPath: /home/rstudio/anari-github
+  #
+  containers:
+    - name: jupyter
+      image: anarinsk/jupyter-ds-korfont
+      env:
+        - name: GRANT_SUDO
+          value: "yes"
+        - name: JUPYTER_ENABLE_LAB
+          value: "yes"
+        - name: JUPYTER_TOKEN
+          value: "1022" 
+      ports:
+        - containerPort: 8888
+        - containerPort: 8501 
+        - containerPort: 8502 
+      volumeMounts:
+        - name: anari-github
+          mountPath: /home/jovyan/anari
+  #        
+  restartPolicy: "OnFailure"
+  #
+  volumes:
+    - name: anari-github
+      hostPath: 
+        path: /Users/anari/Documents/GitHub # macos 

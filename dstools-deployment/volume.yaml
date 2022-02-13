@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: dockerfile
+  name: anari-github
   labels:
     type: local
 spec:
@@ -11,10 +11,11 @@ spec:
     - ReadWriteOnce
   storageClassName: local-storage
   hostPath:
-    path: /Users/anari/Documents/GitHub/setup_k8s/build-tools/kaniko # macos 
+    path: /Users/anari/Documents/GitHub # macos 
+    type: Directory
 
 
 ## Rescue command 
 
 #kubectl create secret docker-registry regcred --docker-server=https://index.docker.io/v1/ --docker-username=anarinsk --docker-password=sksms72sustod --docker-email=anarinsk@gmail.com
-#kubectl get pv | tail -n+2 | awk '{print $1}' | xargs -I{} kubectl patch pv {} -p '{"metadata":{"finalizers": null}}'
+#kubectl patch pv NAME-OF-PV -p '{"metadata":{"finalizers": null}}'
