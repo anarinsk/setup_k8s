@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: dockerfile
+  labels:
+    type: local
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: local-storage
+  hostPath:
+    path: /mnt/e/github/setup_k8s/build-tools/kaniko-amd64 # for work computer 
+
+
+## Rescue command 
+## In Windows Power Shell
+#kubectl.exe create secret docker-registry regcred --docker-server=https://index.docker.io/v1/ --docker-username=anarinsk --docker-password=sksms72sustod --docker-email=anarinsk@gmail.com
+#kubectl get pv | tail -n+2 | awk '{print $1}' | xargs -I{} kubectl patch pv {} -p '{"metadata":{"finalizers": null}}'

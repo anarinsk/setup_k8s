@@ -43,4 +43,5 @@ spec:
   volumes:
     - name: anari-github
       hostPath: 
-        path: /mnt/c/Users/anari/github # Windows+WSL, 5600H
+        #path: /mnt/c/Users/anari/github # Windows+WSL, 5600H
+        path: /mnt/e/github # Windows+WSL, Work 
