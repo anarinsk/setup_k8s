@@ -6,10 +6,10 @@ spec:
   containers:
   - name: build-rstudio
     image: gcr.io/kaniko-project/executor:latest
-    args: ["--dockerfile=/workspace/dockerfile-rstudio-amd64.nerd",
+    args: ["--dockerfile=/workspace/dockerfile-rstudio.nerd",
            "--customPlatform=linux/amd64",
            #"--context=dir://workspace",
-           "--destination=anarinsk/rstudio-korfont"] # replace with your dockerhub account
+           "--destination=anarinsk/rstudio-korfont:amd"] # replace with your dockerhub account
     volumeMounts:
       - name: kaniko-secret
         mountPath: /kaniko/.docker
@@ -17,10 +17,10 @@ spec:
         mountPath: /workspace
   - name: build-jupyter
     image: gcr.io/kaniko-project/executor:latest
-    args: ["--dockerfile=/workspace/dockerfile-jupyter-amd64.nerd",
+    args: ["--dockerfile=/workspace/dockerfile-jupyter.nerd",
            "--customPlatform=linux/amd64",
            #"--context=dir://workspace",
-           "--destination=anarinsk/jupyter-ds-korfont"] # replace with your dockerhub account
+           "--destination=anarinsk/jupyter-ds-korfont:amd"] # replace with your dockerhub account
     volumeMounts:
       - name: kaniko-secret
         mountPath: /kaniko/.docker
