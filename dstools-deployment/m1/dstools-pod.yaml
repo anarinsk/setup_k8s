@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
     - name: rstudio
-      image: anarinsk/rstudio-m1-korfont
+      image: anarinsk/rstudio-korfont:m1
       env:
         - name: PASSWORD
           value: "1022"
@@ -22,7 +22,7 @@ spec:
           mountPath: /home/rstudio/anari-github
   #containers:
     - name: jupyter
-      image: anarinsk/jupyter-ds-korfont
+      image: anarinsk/jupyter-ds-korfont:m1
       env:
         - name: GRANT_SUDO
           value: "yes"
