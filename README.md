@@ -28,4 +28,5 @@
 - [matplotlib 한글 폰트 설정 유무 ](https://github.com/anarinsk/til/blob/master/python/check-matplotlb-korfont.md)
 - 로컬 docker image를 쓸 수는 없는가? 
   + k8s의 개념과 다소 맞지 않는다. node-pod 개념으로 진행되는 체계에서 이게 가능하려면 별도의 docker registry pod를 설정해주는 방법이 있겠지만... 
+- rancher windows에서 실행할 때 반드시 terminal을 관리자 모드에서 실행해야 한다. 그렇지 않으면 에러 뜬다. 
 
