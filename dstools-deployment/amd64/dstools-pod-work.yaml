@@ -36,7 +36,7 @@ spec:
         - containerPort: 8502 
       volumeMounts:
         - name: anari-github
-          mountPath: /home/jovyan/anari
+          mountPath: /home/jovyan/anari-github
   #        
   restartPolicy: "OnFailure"
   #
