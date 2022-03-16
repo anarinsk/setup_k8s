@@ -33,5 +33,5 @@
   + https://github.com/rancher-sandbox/rancher-desktop/issues/1815
   
   ```
-  sudo chmod 775 /private/var/run/rancher-desktop-lima
+  sudo mkdir -m 775 /private/var/run/rancher-desktop-lima
   ```
