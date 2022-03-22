@@ -20,25 +20,6 @@ spec:
       volumeMounts:
         - name: anari-github
           mountPath: /home/rstudio/anari-github
-      imagePullPolicy: Always
-  #containers:
-    - name: jupyter
-      image: anarinsk/jupyter-ds-korfont:m1
-      env:
-        - name: GRANT_SUDO
-          value: "yes"
-        - name: JUPYTER_ENABLE_LAB
-          value: "yes"
-        - name: JUPYTER_TOKEN
-          value: "1022" 
-      ports:
-        - containerPort: 8888
-        - containerPort: 8501 
-        - containerPort: 8502 
-      volumeMounts:
-        - name: anari-github
-          mountPath: /home/jovyan/anari-github
-  #        
   restartPolicy: "OnFailure"
   #
   volumes:

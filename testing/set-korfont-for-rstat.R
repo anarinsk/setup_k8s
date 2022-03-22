@@ -19,3 +19,11 @@ gg <- ggplot(midwest, aes(x=area, y=poptotal)) +
        caption = "Source: midwest")
 
 plot(gg)
+
+### Showtext work?
+
+library(showtext)
+font_add_google('Nanum Pen Script', 'nanumpen')
+showtext_auto()
+p <- ggplot(data=mtcars, aes(x=disp, y=mpg)) + geom_point()
+p + annotate(geom='text', x=275, y=28, size=15, family='nanumpen', label='연습입니다')
