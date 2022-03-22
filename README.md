@@ -7,7 +7,9 @@
 - [build-tools](./build-tools.md) 
   + [another](https://github.com/anarinsk/til/blob/master/kubernetes/kaniko.md)
 - [dstools-deployment](https://github.com/anarinsk/til/blob/master/kubernetes/launch-dstools.md)
-- [testing]()
+- testing
+  + `set-korfont-for-python.ipynb`: python 한글 출력 테스트 용도 
+  + `set-korfont-for-rstat.R`: R 한글 출력 테스트 용도 
 
 ### Structure 
 

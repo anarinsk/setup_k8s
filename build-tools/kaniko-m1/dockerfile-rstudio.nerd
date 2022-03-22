@@ -16,7 +16,7 @@ RUN apt-get update && \
     fc-cache -v && \
     usermod -G root rstudio && \
     apt purge language-pack-* && \
-    sudo apt install language-pack-gnome-ko language-pack-gnome-en && \
+    sudo apt install -y language-pack-gnome-ko language-pack-gnome-en && \
     sudo apt-get autoremove --purge
 #
 RUN R -e "install.packages(c('renv', 'devtools', 'tidyverse'))" && \
