@@ -10,6 +10,7 @@ RUN apt-get update && \
     apt-get -y upgrade &&\
     apt-get install -y fonts-nanum* && \  
     apt-get install -y fontconfig && \
+    sudo apt install -y build-essential libgit2-dev && \
     fc-cache -v && \
     usermod -G root rstudio
 #

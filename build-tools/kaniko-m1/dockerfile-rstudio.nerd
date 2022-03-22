@@ -17,7 +17,8 @@ RUN apt-get update && \
     usermod -G root rstudio && \
     apt purge language-pack-* && \
     sudo apt install -y language-pack-gnome-ko language-pack-gnome-en && \
-    sudo apt-get autoremove --purge
+    sudo apt-get autoremove --purge && \
+    sudo apt install -y build-essential libgit2-dev
 #
 RUN R -e "install.packages(c('renv', 'devtools', 'tidyverse'))" && \
     echo "Sys.setenv(R_INSTALL_STAGED = FALSE)" >> /home/rstudio/.Rprofile
