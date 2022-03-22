@@ -40,9 +40,10 @@
 sudo mkdir -m 775 /private/var/run/rancher-desktop-lima
 ```
 
-### R 도커 레지스트 기반  OS에 아예 한글이 안 깔린 경우 
+### R 도커 레지스트 기반 OS에 아예 한글이 안 깔린 경우 
 
 - 이 경우 폰트를 깔건 뭘 하건 제대로 되지 않는다. 
+  + rocker에서는 나타나지 않고, 2022-03-22 현재 m1용으로 활용하고 있는 docker 레지스트리에서 발생하는 문제다. 
 - https://blog.daum.net/bagjunggyu/225
 - 설치 과정에서 한글 랭귀지 설정을 해주도록 하자. 
 
