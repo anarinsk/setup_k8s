@@ -22,6 +22,7 @@ plot(gg)
 
 ### Showtext work?
 
+install.packages('showtext')
 library(showtext)
 font_add_google('Nanum Pen Script', 'nanumpen')
 showtext_auto()

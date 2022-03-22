@@ -9,9 +9,9 @@ USER root
 #    sed -i 's|security.ubuntu.com|mirror.kakao.com|g' /etc/apt/sources.list && \
 
 RUN apt-get update && \
-    apt-get -y upgrade && \
+    apt-get -y full-upgrade && \
     apt-get install -y fonts-nanum* && \
     pip3 install --upgrade pip && \
-    apt-get install fontconfig -y && \
+    apt-get install -y fontconfig && \
     fc-cache -f -v && \
     rm -rf /home/jovyan/.cache/matplotlib
