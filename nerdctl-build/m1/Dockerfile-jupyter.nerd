@@ -120,6 +120,7 @@ RUN julia -e 'import Pkg; Pkg.update()' && \
     pip3 install --upgrade pip && \
     fc-cache -f -v && \
     rm -rf /home/jovyan/.cache/matplotlib
-USER root 
+
+USER root # finalized with root 
 
 WORKDIR "${HOME}"
