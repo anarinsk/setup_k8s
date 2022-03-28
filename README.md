@@ -25,8 +25,6 @@
     + amd64 
     + m1 
 
-
-
 ## MISC 
 
 - [matplotlib 한글 폰트 설정 유무 ](https://github.com/anarinsk/til/blob/master/python/check-matplotlb-korfont.md)
