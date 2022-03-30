@@ -20,6 +20,7 @@ spec:
       volumeMounts:
         - name: anari-github
           mountPath: /home/rstudio/anari-github
+      imagePullPolicy: Always
   #containers:
     - name: jupyter
       image: anarinsk/jupyter-ds-korfont:amd64
@@ -37,7 +38,8 @@ spec:
       volumeMounts:
         - name: anari-github
           mountPath: /home/jovyan/anari-github
-  #        
+      imagePullPolicy: Always
+#
   restartPolicy: "OnFailure"
   #
   volumes:

@@ -6,42 +6,46 @@ metadata:
     app: jupyter-rstudio
 spec:
   containers:
+  # 
     - name: rstudio
       image: anarinsk/rstudio-korfont:amd64
+      imagePullPolicy: Always
       env:
         - name: PASSWORD
           value: "1022"
         - name: UMASK
           value: "000"
-        - name: ROOT 
-          value: "true" 
+        - name: ROOT
+          value: "true"
       ports:
         - containerPort: 8787
       volumeMounts:
         - name: anari-github
           mountPath: /home/rstudio/anari-github
-  #containers:
+  # containers:Jupyter
     - name: jupyter
       image: anarinsk/jupyter-ds-korfont:amd64
+      imagePullPolicy: Always
       env:
         - name: GRANT_SUDO
           value: "yes"
         - name: JUPYTER_ENABLE_LAB
           value: "yes"
         - name: JUPYTER_TOKEN
-          value: "1022" 
+          value: "1022"
       ports:
         - containerPort: 8888
-        - containerPort: 8501 
-        - containerPort: 8502 
+        - containerPort: 8501
+        - containerPort: 8502
       volumeMounts:
         - name: anari-github
           mountPath: /home/jovyan/anari-github
-  #        
+  #restartPolicy
   restartPolicy: "OnFailure"
-  #
+  #Define volume
   volumes:
     - name: anari-github
-      hostPath: 
+      hostPath:
         #path: /mnt/c/Users/anari/github # Windows+WSL, 5600H
-        path: /mnt/e/github # Windows+WSL, Work 
+        path: /mnt/e/github # Windows+WSL, Work
+#
