@@ -70,7 +70,7 @@ USER ${NB_UID}
 # r-e1071: dependency of the caret R package
 #    
 RUN mamba install -c conda-forge --quiet --yes \
-    r-base \
+    'r-base' \
     'r-caret' \
     'r-crayon' \
     'r-devtools' \
